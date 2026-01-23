@@ -1,2 +1,2 @@
 # helpshared-com.github.io
-Helpshared.com - dibuat dengan GitHub Pages
+Berisi Artikel Cara-cara, Tips & Trik, Contoh-contoh CV Lamaran kerja, File Dokumen Makalah dan Contoh Surat-menyurat.
