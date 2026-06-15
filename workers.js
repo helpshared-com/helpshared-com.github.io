@@ -1,21 +1,3 @@
-export default {
-  async fetch(request, env, ctx) {
-    // Fetch the original response
-    const response = await fetch(request);
 
-    // Detect user country from Cloudflare headers
-    const country = request.headers.get('ip.src.country');
-    
-    // Dynamically decide the lang attribute
-    const langCode = country === 'ID' ? 'id' : 'en';
-
-    // Use HTMLRewriter to modify the html tag
-    return new HTMLRewriter()
-      .on('html', {
-        element(element) {
-          element.setAttribute('lang', langCode);
-        }
-      })
-      .transform(response);
-  }
-};
+const global = ['resume', 'letter']; if (global.some(path => window.location.pathname.includes(path))) {document.getElementsByTagName("html")[0].lang = 'en';};
+const lokal = ['kerja', 'lamaran', 'contoh', 'surat', 'cara', 'indonesia', 'gambar', 'id', 'video']; if (lokal.some(path => window.location.pathname.includes(path))) {document.getElementsByTagName("html")[0].lang = 'id';};
