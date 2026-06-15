@@ -4,12 +4,12 @@ export default {
     const response = await fetch(request);
 
     // Detect user country from Cloudflare headers
-    const country = request.headers.get('cf-ipcountry');
+    const country = request.headers.get('ip.src.country');
     
     // Dynamically decide the lang attribute
     const langCode = country === 'ID' ? 'id' : 'en';
 
-    // Use HTMLRewriter to modify the <html> tag
+    // Use HTMLRewriter to modify the html tag
     return new HTMLRewriter()
       .on('html', {
         element(element) {
