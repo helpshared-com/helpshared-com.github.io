@@ -1,5 +1,4 @@
-User-agent: Mediapartners-Google
-Disallow: 
+# robots.txt for https://cdn.helpshared.com
 
 User-agent: *
 Allow: /
